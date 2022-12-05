@@ -187,7 +187,7 @@ def test_get_all_pets_with_wrong_filter(filter = str(generate_random_string(7)))
 
 ############## Тест 11. Проверка возможности добавить нового питомца без имени##########################################
 
-def test_negative_addition_new_pet(name = None, animal_type = 'собака', age = '15', pet_photo='images/dog.jpg'):
+def test_add_new_pet_without_name(name = None, animal_type = 'собака', age = '15', pet_photo='images/dog.jpg'):
     pet_photo = os.path.join(os.path.dirname(__file__), pet_photo)
     _, auth_key = pf.get_api_key(valid_email, valid_password)
     status, result = pf.add_new_pet(auth_key, name, animal_type, age, pet_photo)
